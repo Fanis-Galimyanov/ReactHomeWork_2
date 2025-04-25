@@ -1,6 +1,7 @@
 import Greeting from "./Greeting";
 import {useEffect, useState} from "react"
 import {names} from "../data"
+import Clock from "./Clock";
 
 function randomInteger(min, max) {
     let rand = min + Math.random() * (max + 1 - min);
@@ -26,6 +27,9 @@ export default function Container(){
     },5000);
 
     return(
-         <Greeting key={props.nameChangedNuber} {...props} />
+        <>
+            <Clock/>
+            <Greeting key={props.nameChangedNuber} {...props} />
+         </>
     )
 }
