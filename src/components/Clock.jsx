@@ -1,6 +1,4 @@
 import { useEffect, useState } from 'react'
-import logo from '/blueplanet.svg'
-
 export default function Clock(){
     const [now, setNow] = useState(new Date())
 
@@ -14,8 +12,7 @@ export default function Clock(){
 
     return(
       <>
-        <img className={'blueplanet'} src={logo} alt={'JavaScript'} />
-        <span style={{fontSize: 80}}>
+        <span style={{fontSize: 40}}>
             Сегодня: {now.toLocaleDateString()}
             <br />
             Cейчас: {now.toLocaleTimeString()}
